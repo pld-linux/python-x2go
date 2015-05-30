@@ -32,7 +32,8 @@ BuildRequires:	python-simplejson
 # For docs
 BuildRequires:	python-Xlib
 %endif
-Requires:	nxproxy
+# for nxproxy
+Requires:	nx
 Requires:	python-Xlib
 Requires:	python-gevent
 Requires:	python-paramiko

@@ -1,0 +1,12 @@
+diff -up python-x2go-0.4.0.6/setup.py.py3 python-x2go-0.4.0.6/setup.py
+--- python-x2go-0.4.0.6/setup.py.py3	2013-07-28 11:43:33.000000000 -0600
++++ python-x2go-0.4.0.6/setup.py	2013-08-01 14:37:43.700592048 -0600
+@@ -21,7 +21,7 @@
+ import os
+ 
+ from setuptools import setup, find_packages
+-for line in file(os.path.join('x2go', '__init__.py')).readlines():
++for line in open(os.path.join('x2go', '__init__.py'),encoding='utf-8').readlines():
+     if (line.startswith('__VERSION__')):
+         exec(line.strip())
+ MODULE_VERSION = __VERSION__

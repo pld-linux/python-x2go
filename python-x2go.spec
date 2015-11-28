@@ -87,12 +87,12 @@ cp -a . py3
 %endif
 
 %build
-%{__python} setup.py build
+%py_build
 
 %if %{with python3}
 cd py3
 2to3 --write --nobackups py3
-%{__python3} setup.py build
+%py3_build
 cd ..
 %endif
 
@@ -106,17 +106,11 @@ epydoc --debug -n "Python X2Go" -u http://www.x2go.org -v --html --no-private -o
 rm -rf $RPM_BUILD_ROOT
 %if %{with python3}
 cd py3
-%{__python3} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py3_install
 cd ..
 %endif
 
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %{__rm} -r $RPM_BUILD_ROOT%{py_sitescriptdir}/x2go/tests
 

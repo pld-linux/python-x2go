@@ -15,6 +15,7 @@ Source0:	http://code.x2go.org/releases/source/python-%{module}/%{name}-%{version
 # Source0-md5:	b5359cd80779b5e50586f6dbf35fd659
 Patch0:		python-x2go-py3.patch
 URL:		http://www.x2go.org/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
 %if %{with python3}

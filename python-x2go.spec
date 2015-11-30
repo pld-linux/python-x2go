@@ -8,7 +8,7 @@
 Summary:	Python module providing X2Go client API
 Name:		python-%{module}
 Version:	0.5.0.3
-Release:	2
+Release:	3
 License:	AGPLv3+
 Group:		Development/Languages
 Source0:	http://code.x2go.org/releases/source/python-%{module}/%{name}-%{version}.tar.gz
